@@ -14,7 +14,8 @@
 }
 
 .conmpany-ifo span {
-  padding: 0.7rem;
+  padding: 0.9rem 0.4rem 0.3rem 0.4rem;
+  margin: 0 0.2rem;
   background-color: #1984e2;
   color: #fff;
 }
@@ -198,6 +199,7 @@
   height: 5rem;
   background-color: #373c52;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 4.5rem 6.5rem 10.75rem 6.5rem;
   color: #fff;
@@ -206,6 +208,7 @@
 .footer .company-info {
   display: flex;
   flex-direction: column;
+  max-width: 20rem;
   justify-content: space-between;
   height: 13rem;
 }
@@ -217,4 +220,90 @@
 
 .footer .nav-list {
   flex-direction: column;
+}
+
+.container-form {
+  padding: 9.94rem 0;
+  background-color: #d9d9d9;
+}
+
+form {
+  max-width: 30rem;
+  max-height: 56.25rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 15px 16px 21px 10px rgba(161, 143, 143, 0.43);
+  gap: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+  margin: 0 !important;
+}
+
+.separator {
+  border-bottom: 1px solid gray;
+  margin-left: -2.47rem;
+  width: calc(100% + 5rem);
+  margin: 1.5rem 0 2.5rem 0 2.5rem !important;
+}
+
+.wrapper-input,
+.wrapper-name {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+
+.wrapper-name > input,
+.wrapper-input > input {
+  width: 100%;
+  background-color: #d9d9d9;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.5s;
+}
+
+.wrapper-name > input:focus,
+.wrapper-input > input:focus {
+  outline: none;
+  border: none;
+}
+
+.wrapper-name input:focus ~ .label-form,
+.wrapper-input input:focus ~ .label-form {
+  top: -1.3rem;
+}
+
+.label-form {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+}
+
+.f-form {
+  text-align: center;
+}
+
+.form-submit {
+  background-color: #1984e2;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.q-account {
+  color: #b4b4b4;
+}
+
+.redirect-form:hover {
+  text-decoration: underline;
 }

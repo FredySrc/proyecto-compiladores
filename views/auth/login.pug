@@ -2,3 +2,22 @@ extends ../templates/layout.pug
 
 block main
     main.main
+        div.container-form
+            form(action='/my-handling-form-page' method='get')
+                h4 Iniciar Seccion
+
+                div.separator
+
+                div.wrapper-input
+                    input#lname(type='email' name='user-email')
+                    label.label-form(for='email-user') Correo Electronico
+
+                div.wrapper-input
+                    input#lname(type='password' name='password-email')
+                    label.label-form(for='password-email') Contraseña
+
+                button.form-submit Registrar
+            
+                div.f-form
+                    span.q-account Tiene una cuenta?
+                    a(href='/auth/register').redirect-form Inicia Secion
