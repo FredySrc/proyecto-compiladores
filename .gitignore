@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,windows,images,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,images,visualstudiocode
 
+.env
 ### Images ###
 # JPEG
 *.jpg

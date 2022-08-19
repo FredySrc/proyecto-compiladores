@@ -18,22 +18,10 @@ block main
 
             h2 Nuestras Especialidades
 
-            div.carousel
-                div.carousel-info
-                    img.img-item(src="../images/SpecialtiesOne.png", alt="")
-                    div.label nombre especialidad 
-                div.carousel-info
-                    img.img-item(src="../images/SpecialtiesTwo.png", alt="")
-                    div.label nombre especialidad 
-                div.carousel-info
-                    img.img-item(src="../images/SpecialtiesThree.png", alt="")
-                    div.label nombre especialidad 
-                div.carousel-info
-                    img.img-item(src="../images/SpecialtiesOne.png", alt="")
-                    div.label nombre especialidad 
-                div.carousel-info
-                    img.img-item(src="../images/SpecialtiesTwo.png", alt="")
-                    div.label nombre especialidad 
-                div.carousel-info
-                    img.img-item(src="../images/SpecialtiesThree.png", alt="")
-                    div.label nombre especialidad 
+            ul.carousel
+                mixin label(especialidad)
+                    div.label= especialidad
+                each especialidad in especialidades
+                    li.carousel-info
+                        +label(especialidad.especialidadNombre)
+                        img.img-item(src="../images/SpecialtiesOne.png", alt="")

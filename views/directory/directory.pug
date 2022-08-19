@@ -1,0 +1,14 @@
+extends ../templates/layout.pug
+
+block main
+    main.main
+        section.info-directory
+            img.stethoscope(src="../images/stethoscope-solid.svg", alt="")
+            p contamos con varias especialidades de la medicina con medicos capacitados y mucha exoeriencia
+
+
+        section.list-directory
+            mixin special(special)
+                    a(href='/directory/details/' + special).button= special
+            each especilidad in especialidades
+                +special(especilidad.especialidadNombre)

@@ -1,0 +1,12 @@
+extends ../templates/layout.pug
+
+block main
+    main.main
+        mixin special(especialista)
+            div.specialist= especialista
+
+        ul.container-specialist
+            each especialista in especialistas
+                li.wrapper-specialist
+                    img.img-details(src="/images/person-fill.svg", alt="")
+                    +special(especialista.usuario.usuarioNombre)
