@@ -3,7 +3,7 @@ extends ../templates/layout.pug
 block main
     main.main
         div.container-form
-            form(action='/my-handling-form-page' method='get')
+            form(action='/auth/register' method='post')
                 h4 Registro de usuario
 
                 div.separator
@@ -17,24 +17,25 @@ block main
                         input#lname(type='text' name='lname')
                         label.label-form(for='lname') Apellido
 
-                div.wrapper-input
-                    input#lname(type='tel' name='phone')
-                    label.label-form(for='phone') Telefono
+                //- div.wrapper-input
+                //-     input#lname(type='tel' name='phone')
+                //-     label.label-form(for='phone') Telefono
 
                 div.wrapper-input
-                    input#lname(type='email' name='user-email')
-                    label.label-form(for='email-user') Correo
+                    input#lname(type='email' name='euser')
+                    label.label-form(for='euser') Correo
 
                 div.wrapper-input
-                    input#lname(type='email' name='confirm-email')
+                    input#lname(type='email' name='cemail')
                     label.label-form(for='confirm-email') Confirmar Correo
 
                 div.wrapper-input
-                    input#lname(type='password' name='password-email')
+                    input#lname(type='password' name='pemail')
                     label.label-form(for='password-email') Contraseña
 
                 button.form-submit Registrar
             
                 div.f-form
                     span.q-account Tiene una cuenta?
+
                     a(href='/auth/login').redirect-form Inicia Secion
